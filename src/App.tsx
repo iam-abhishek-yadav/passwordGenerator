@@ -22,6 +22,7 @@ const App: React.FC = () => {
 	const copyPassword = useCallback(() => {
 		window.navigator.clipboard.writeText(password);
 		setText("copied");
+		setTimeout(() => {setText("copy")}, 2000)
 	}, [password]);
 
 	const handleCheckboxChange = (
